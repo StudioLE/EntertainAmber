@@ -1,4 +1,10 @@
-GetNewFactIntent Amber
-GetNewFactIntent irritate
-GetNewFactIntent irritation
-GetNewFactIntent dog
+PhraseIntent entertain the dog
+PhraseIntent play with the dog
+PhraseIntent say something to the dog
+PhraseIntent talk to the dog
+PhraseIntent irritate the dog
+PhraseIntent entertain amber
+PhraseIntent play with amber
+PhraseIntent say something to amber
+PhraseIntent you know what to do
+PhraseIntent irritate amber

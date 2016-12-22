@@ -5,7 +5,7 @@ var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 var languageStrings = {
     "en-GB": {
         "translation": {
-            "FACTS": [
+            "PHRASES": [
                 'Amber, sit. I said sit. s. i. t. sit. Stupid dog.',
                 'Amber, down.',
                 'Amber... Amber... Amber... Amber... Amber... Amber... Amber... Amber... Nothing.',
@@ -38,21 +38,21 @@ exports.handler = function(event, context, callback) {
 
 var handlers = {
     'LaunchRequest': function () {
-        this.emit('GetFact');
+        this.emit('GetPhrase');
     },
-    'GetNewFactIntent': function () {
-        this.emit('GetFact');
+    'PhraseIntent': function () {
+        this.emit('GetPhrase');
     },
-    'GetFact': function () {
-        // Get a random space fact from the space facts list
+    'GetPhrase': function () {
+        // Get a random phrase from the phrases list
         // Use this.t() to get corresponding language data
-        var factArr = this.t('FACTS');
-        var factIndex = Math.floor(Math.random() * factArr.length);
-        var randomFact = factArr[factIndex];
+        var phraseArr = this.t('PHRASES');
+        var phraseIndex = Math.floor(Math.random() * phraseArr.length);
+        var randomPhrase = phraseArr[phraseIndex];
 
         // Create speech output
-        var speechOutput = randomFact;
-        this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomFact)
+        var speechOutput = randomPhrase;
+        this.emit(':tellWithCard', speechOutput, this.t("SKILL_NAME"), randomPhrase)
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");
