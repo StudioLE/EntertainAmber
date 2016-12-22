@@ -1,18 +1,24 @@
 {
-  "name": "skill-sample-nodejs-fact-i18n",
+  "name": "EntertainAmber",
   "version": "1.0.0",
-  "description": "I18n version of fact skill.",
+  "description": "An Alexa skill to entertain your pet.",
+  "keywords": [
+    "alexa",
+    "skill",
+    "pet",
+    "dog",
+    "amber"
+  ],
+  "author": {
+    "name": "Laurence Elsdon",
+    "email": "hi@studiole.uk",
+    "url": "https://studiole.uk"
+  },
+  "license": "Apache-2.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "alexa",
-    "skill",
-    "fact"
-  ],
-  "author": "Amazon.com",
-  "license": "Apache-2.0",
   "dependencies": {
     "alexa-sdk": "^1.0.6"
   }
