@@ -2,7 +2,7 @@
 var Alexa = require('alexa-sdk');
 var APP_ID = undefined;  // TODO replace with your app ID (OPTIONAL).
 
-var languageStrings = {
+exports.lang = {
     "en-GB": {
         "translation": {
             "PHRASES": [
@@ -31,7 +31,7 @@ exports.handler = function(event, context, callback) {
     var alexa = Alexa.handler(event, context);
     alexa.APP_ID = APP_ID;
     // To enable string internationalization (i18n) features, set a resources object.
-    alexa.resources = languageStrings;
+    alexa.resources = exports.lang;
     alexa.registerHandlers(handlers);
     alexa.execute();
 };
